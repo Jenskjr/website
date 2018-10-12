@@ -54,7 +54,7 @@ $(document).ready(function(){
 	//Projects
 	$("#section_header_1").text("Portefolio");
 
-	$("#projects_category_header_1").text("Webshop");
+	$("#projects_category_header_1").text("Webshop eksempel");
 	$("#projects_category_header_2").text("To-do app");
 	$("#projects_category_header_3").text("Liverpool stats API");
 

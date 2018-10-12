@@ -16,7 +16,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #85dcbf;
+  color: #41b3a3;
 }
 
 a:active {
@@ -24,7 +24,7 @@ a:active {
   color: #41b3a3;
 }
 
-.nav-link {font-size: 0.8rem;}
+.nav-link {font-size: 0.9rem;}
 
 
 /*background colors*/
@@ -59,7 +59,7 @@ a:active {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -20%);
   color: white;
@@ -81,11 +81,11 @@ a:active {
   color: white;
 }
 
-.space {height: 100px;}
+.space {height: 80px;}
 
 .cv-card {min-height: 200px;}
 
-.footer {min-height: 300px;}
+.footer {min-height: 250px;}
 
 /*xs*/
 @media all and (max-width: 575px) {
