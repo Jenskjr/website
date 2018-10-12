@@ -19,9 +19,12 @@ a:hover {
   color: #85dcbf;
 }
 
-h2.category {
+a:active {
+  text-decoration: none;
   color: #41b3a3;
 }
+
+.nav-link {font-size: 0.8rem;}
 
 
 /*background colors*/
@@ -56,7 +59,7 @@ h2.category {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -20%);
   color: white;
@@ -86,10 +89,12 @@ h2.category {
 
 /*xs*/
 @media all and (max-width: 575px) {
+
 }
 
 /*sm*/
 @media all and (max-width: 768px) and (min-width: 576px)  {
+
 }
 
 /*md*/
@@ -104,59 +109,5 @@ h2.category {
 @media all and (min-width: 1200px) {
 }
 
-/* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  /* some CSS here */
-}
-
-/* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  /* some CSS here */
-}
-
-/* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px){
-  /* some CSS here */
-}
-
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-     html {font-size: 2rem; }
-    .hero-image {height: 500px;}
-    .cv-card {min-height: 500px;}  
-    .footer {min-height: 500px;}
-    .container {margin: 0px; max-width: 100%; padding: 30px;}
-    .nav-link {font-size: 1.4rem;}
-}
-
-/* #### iPhone 5 Portrait or Landscape #### */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-    html {font-size: 2rem; }
-    .hero-image {height: 500px;}
-    .cv-card {min-height: 500px;}  
-    .footer {min-height: 500px;}
-    .container {margin: 0px; max-width: 100%; padding: 30px;}
-    .nav-link {font-size: 1.4rem;}
-}
-
-/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-    html {font-size: 2rem; }
-    .hero-image {height: 500px;}
-    .cv-card {min-height: 500px;} 
-    .footer {min-height: 500px;}
-    .container {margin: 0px; max-width: 100%; padding: 30px;}
-    .nav-link {font-size: 1.4rem;}
-}
-
-/* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  /* some CSS here */
-}
-
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  /* some CSS here */
-}
 
 

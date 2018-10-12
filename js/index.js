@@ -5,7 +5,7 @@ $(window).resize(function() {
 $(document).ready(function(){
 
 	const home_position = $("body").offset().top;
-	const projects_position = $('#projects').offset().top-150;
+	const projects_position = $('#projects').offset().top-100;
 	const cv_position = $("#cv").offset().top+50;	
 
 	$("#homeButton").on({
