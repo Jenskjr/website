@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="./js/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="./website/css/index.css">
 </head>
 <body>
@@ -20,8 +19,8 @@ $(window).resize(function() {
 $(document).ready(function(){
 
 	const home_position = $("body").offset().top;
-	const projects_position = $('#projects').offset().top-100;
-	const cv_position = $("#cv").offset().top-50;	
+	const projects_position = $('#projects').offset().top-150;
+	const cv_position = $("#cv").offset().top+50;	
 
 	$("#homeButton").on({
     	click: function(){
@@ -62,7 +61,13 @@ $(document).ready(function(){
 	});
 
 	//Text content	
+	//Hero
+	$("#hero_tagline").text("Front-end udvikling");
+	$("#hero_headline").text("Jens Kjær");
+
 	//Projects
+	$("#section_header_1").text("Portefolio");
+
 	$("#projects_category_header_1").text("Webshop");
 	$("#projects_category_header_2").text("To-do app");
 	$("#projects_category_header_3").text("Liverpool stats API");
@@ -74,20 +79,27 @@ $(document).ready(function(){
 	$(".projects_github").text("Github");
 
 	//CV
+	$("#section_header_2").text("CV");
+
 	$("#cv_name").text("Jens Kjær");
 	$("#cv_tagline").text("Front-end udvikler med forretningsforståelse");
 	$("#cv_phone").text("61 65 47 76");
 	
+	$("#cv_programing_headline").text("Programmering");
 	$("#cv_programing").text("JavaScript, PHP, SQL, HTML, CSS");
 
+	$("#cv_course_headline").text("Kurser");
 	$("#cv_course_1").text("Front-end med React og Redux");
 	$("#cv_course_2").text("Journalistikens grundtrin");
 
+	$("#cv_language_headline").text("Sprog");
 	$("#cv_language").text("Dansk, tysk og engelsk");	
 	
+	$("#cv_education_headline").text("Uddannelse");
 	$("#cv_education_1").text("Cand.it i it, kommunikation og organisation");
 	$("#cv_education_2").text("HA almen");
 	
+	$("#cv_job_headline").text("Erhvervserfaring");
 	$("#cv_job_experience_1").text("Implementeringskonsulent");
 	$("#cv_job_experience_2").text("Forretningskonsulent");
 
@@ -97,8 +109,8 @@ $(document).ready(function(){
 	$("#footer_city").text("2200 København N");
 	$("#footer_linkedin").text("www.linkedin.com");
 	$("#footer_copyright").text("");
-
 	$("#footer-tagline").text("Front-end udvikling");
+	$("#footer_url").text("Jenskjr.dk");
 });
 
 </script>
@@ -122,23 +134,23 @@ $(document).ready(function(){
 	<!--Hero section-->	
 	<div class="hero-image">
   		<div class="hero-text">
-    		<h1 style="font-size:50px">Jens Kjær</h1>
-    		<p>Front-end udvikling</p>
+    		<h1 id="hero_headline"></h1>
+    		<h4 id="hero_tagline"></h4>
   		</div>
 	</div>	  
 
-	<!--main-->
+	<!--main section-->
 	<!--projects-->
 	<div id="projects" class="bg-green">
-		<div class="container">	
-			<div style="height: 100px">
-				<div class="text-center text-white">			
-					<h2>Portefolio</h2>
+		<div class="container">		
+			<div class="row">	
+				<div class="col-12 text-center text-white pt-4 pb-4">			
+					<h2 id="section_header_1"></h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 text-center">
-					<div style="margin-bottom: 50px" class="card bg-light p-4">
+					<div class="card bg-light p-4 mb-4 mt-4">
 						<a href="./webshop/" target="_blank">
 							<h4 id="projects_category_header_1" class="mb-4"></h4>
 							<div style="min-height: 300px;" class="border pt-4 bg-white">
@@ -150,7 +162,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 				<div class="col-lg-4 text-center">
-					<div style="margin-bottom: 50px" class="card bg-light p-4">
+					<div class="card bg-light p-4 mb-4 mt-4">
 						<a href="./todoapp/" target="_blank">
 							<h4 id="projects_category_header_2" class="mb-4"></h4>
 							<div style="min-height: 300px;" class="border pt-4 bg-white">
@@ -162,11 +174,11 @@ $(document).ready(function(){
 					</div>
 				</div>
 				<div class="col-lg-4 text-center">
-					<div style="margin-bottom: 50px" class="card bg-light p-4">
+					<div class="card bg-light p-4 mb-4 mt-4">
 						<a href="./liverpool_stats/request_api.html" target="_blank">
 							<h4 id="projects_category_header_3" class="mb-4"></h4>
 							<div style="min-height: 300px;" class="border pt-4 bg-white">
-								<img style="max-width: 55%;" src="./website/images/liverpool.png">
+								<img style="max-width: 50%;" src="./website/images/liverpool.png">
 							</div>
 							<h5 id="projects_category_subheader_3" class="pt-4"></h5>
 						</a>
@@ -174,95 +186,85 @@ $(document).ready(function(){
 					</div>
 				</div>
 			</div>
+			<div class="space"></div>
 		</div>
-
-		<!--space-->
-		<div style="height: 100px" class="bg-green"></div>
 	</div><!--projects-->	
 
-
 	<!--CV-->
-	<div class="bg-light">
-		<!--space-->
-		<div id="cv" style="height: 100px" class="bg-light"></div>
+	<div id="cv" class="bg-light">
 		<div class="container">
-			<div>
-				<div style="height: 100px">
-					<div class="text-center mt-4">			
-						<h2>CV</h2>
+			<div class="space"></div>
+				<div class="row">
+					<div class="col-12 text-center pt-4 pb-4">			
+						<h2 id="section_header_2"></h2>
 					</div>
 				</div>
+		
+				<div class="text-center pb-4 justify-content-center">
+					<h2 id="cv_name" class=" mt-4"></h2>
+					<p id="cv_tagline" class="m-2"></p>
+					<h5 id="cv_phone"></h5>
+				</div>
+
 				<div class="row">
-					<div class="col-md-4 text-center">
-						<div style="height: 200px" class="mt-4 p-4 border">
-							<h5>Programmering</h5>
+					<div class="col-lg-4 col-md-6 text-center">
+						<div class="cv-card card mb-4 p-4 border bg-white">
+							<h5 id="cv_programing_headline"></h5>
 							<p id="cv_programing" class="mt-2"></p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center justify-content-center">
-						<div>
-							<h2 id="cv_name" class=" mt-4"></h2>
-							<p id="cv_tagline" class="m-2"></p>
-							<h5 id="cv_phone"></h5>
-							<div style="width: 50%; margin: 0 auto;" class="p-4">
-							</div>
+					<div class="col-lg-4 col-md-6 text-center">
+						<div class="cv-card card mb-4 p-4 border bg-white">
+							<h5 id="cv_language_headline"></h5>
+							<p id="cv_language" class="mt-2"></p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
-						<div style="height: 200px" class="mt-4 p-4 border">
-							<h5>Uddannelse</h5>
-							<p id="cv_education_1" class="mt-2"></p>
-							<p id="cv_education_2"></p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center">
-						<div style="height: 200px" class="mt-4 mb-4 p-4 border">
-							<h5>Kurser</h5>
+					<div class="col-lg-4 col-md-6 text-center">
+						<div class="cv-card card mb-4 p-4 border bg-white">
+							<h5 id="cv_course_headline"></h5>
 							<p id="cv_course_1"class="mt-2"></p>
 							<p id="cv_course_2"></p>
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
-						<div style="height: 200px" class="mt-4 p-4 border">
-							<h5>Sprog</h5>
-							<p id="cv_language" class="mt-2"></p>
+					<div class="col-md-6 text-center">
+						<div class="cv-card card mb-4 p-4 border bg-white">
+							<h5 id="cv_education_headline"></h5>
+							<p id="cv_education_1" class="mt-2"></p>
+							<p id="cv_education_2"></p>
 						</div>	
 					</div>
-					<div class="col-md-4 text-center">
-						<div style="height: 200px" class="mt-4 p-4 border">
-							<h5>Erhvervserfaring</h5>
+					<div class="col-lg-6 col-md-12 text-center">
+						<div class="cv-card card mb-4 p-4 border bg-white">
+							<h5 id="cv_job_headline"></h5>
 							<p id="cv_job_experience_1" class="mt-2"></p>
 							<p id="cv_job_experience_2"></p>
 						</div>
-					</div>	
-				</div>					
-			</div>
+					</div>						
+				</div>
+				<div class="space"></div>
 		</div>
 	</div><!--cv-->
 
-	<!--space-->
-	<div style="height: 100px" class="bg-light">
-	</div>
-
 	<!--Footer-->
 	<div class="text-white bg-dark">
-		<div style="height: 300px" class="container pt-4">
-	    	<div class="float-left mr-4 p-4">
-		    	<p>
-					<span id="footer_name"></span><br>
-					<span id="footer_street"></span><br>
-					<span id="footer_city"></span><br>
-					<a id="footer_linkedin" target="_blank" href="http://linkedin.com/in/jens-kjær-7b9984171"></a>
-		    	</p>
-		    	<p id="footer_copyright"></p>
-	    	</div>
-	    	<div class="h-50 float-right mr-4 p-4 text-white rounded">
-	    		<span class="font-weight-bold">JensKjr.dk</span>
-	    		<p id="footer-tagline"></p>  		
+		<div class="footer container pt-4">
+	    	<div class="row">
+		    	<div class="col-lg-8">
+			    	<p>
+						<span id="footer_name"></span><br>
+						<span id="footer_street"></span><br>
+						<span id="footer_city"></span><br>
+						<a id="footer_linkedin" target="_blank" href="http://linkedin.com/in/jens-kjær-7b9984171"></a>
+			    	</p>
+			    	<p id="footer_copyright"></p>
+		    	</div>
+	    	
+		    	<div class="col-lg-4">
+		    		<span id="footer_url" class="font-weight-bold"></span>
+		    		<p id="footer-tagline"></p>  		
+		    	</div>
 	    	</div>
 	    </div>
-  	</div>	
+  	</div><!--footer-->	
 </body>
 </html>

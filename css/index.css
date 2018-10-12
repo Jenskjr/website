@@ -1,43 +1,8 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-size: 1rem;
 }
 
-/*mobile*/
-@media screen and (max-width: 500px) {
-     body {
-      font-size: 1.2rem;          
-    }
-}
-
-/*xs*/
-@media all and (max-width: 768px) {
-    body {
-      font-size: 1.4rem;          
-    }
-}
-
-/*sm*/
-@media all and (max-width: 992px) {
-    body {
-      font-size: 1.2rem;          
-    }
-}
-
-/*md*/
-@media all and (max-width: 1199px) {
-    body {
-      font-size: 1.2rem;          
-    }
-}
-
-/*lg*/
-@media all and (min-width: 1200px) {
-    body {
-      font-size: 1rem;          
-    }
-}
 
 /*links and headers*/
 li a.current {
@@ -81,7 +46,7 @@ h2.category {
 .hero-image {
 	background-color: #41b3a3;
 	/*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");*/
-	height: 250px;
+	height: 350px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -113,5 +78,85 @@ h2.category {
   color: white;
 }
 
+.space {height: 100px;}
+
+.cv-card {min-height: 200px;}
+
+.footer {min-height: 300px;}
+
+/*xs*/
+@media all and (max-width: 575px) {
+}
+
+/*sm*/
+@media all and (max-width: 768px) and (min-width: 576px)  {
+}
+
+/*md*/
+@media all and (max-width: 992px) and (min-width: 769px){
+}
+
+/*lg*/
+@media all and (min-width: 993px) and (max-width: 1199px) {
+}
+
+/*xlg*/
+@media all and (min-width: 1200px) {
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  /* some CSS here */
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+  /* some CSS here */
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+  /* some CSS here */
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+     html {font-size: 2rem; }
+    .hero-image {height: 500px;}
+    .cv-card {min-height: 500px;}  
+    .footer {min-height: 500px;}
+    .container {margin: 0px; max-width: 100%; padding: 30px;}
+    .nav-link {font-size: 1.4rem;}
+}
+
+/* #### iPhone 5 Portrait or Landscape #### */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+    html {font-size: 2rem; }
+    .hero-image {height: 500px;}
+    .cv-card {min-height: 500px;}  
+    .footer {min-height: 500px;}
+    .container {margin: 0px; max-width: 100%; padding: 30px;}
+    .nav-link {font-size: 1.4rem;}
+}
+
+/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+    html {font-size: 2rem; }
+    .hero-image {height: 500px;}
+    .cv-card {min-height: 500px;} 
+    .footer {min-height: 500px;}
+    .container {margin: 0px; max-width: 100%; padding: 30px;}
+    .nav-link {font-size: 1.4rem;}
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  /* some CSS here */
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px){
+  /* some CSS here */
+}
 
 
