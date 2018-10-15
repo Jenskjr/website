@@ -1,66 +1,49 @@
-$(window).resize(function() {
 
-});	
 
 $(document).ready(function(){
 
 	const home_position = $("body").offset().top;
-	const projects_position = $('#projects').offset().top-100;
-	const cv_position = $("#cv").offset().top+50;	
+	const projects_position = $('#projects').offset().top;
+	const cv_position = $("#cv").offset().top;	
 
-	$("#homeButton").on({
-    	click: function(){
-        $('html, body').animate({
-            scrollTop: home_position}, 1000);
-		} 
-	});
-
-	$("#projectsButton").on({
-    	click: function(){    
-    	$('html, body').animate({
-                    scrollTop: projects_position}, 1000);
-		} 
-	});
-
-	$("#cvButton").on({
-    	click: function(){
-        $('html, body').animate({
-                    scrollTop: cv_position}, 1000);
-		} 
-	});
 
 	//Scroll css functionality
-
 	$(window).scroll(function() {
 		if ($(window).scrollTop() < (home_position+100) ) {
 			$("a.current").removeClass("current");
 		 	$("#homeButton").addClass("current");
 		}
-		if ($(window).scrollTop() >= (projects_position-50) ) {
+		
+		if ($(window).scrollTop() >= (projects_position-100) ) {
 			$("a.current").removeClass("current");
 		 	$("#projectsButton").addClass("current");
 		}
-		if ($(window).scrollTop() >= (cv_position-50) ) {
+		
+		
+		if ($(window).scrollTop() >= (cv_position-100) ) {
 			$("a.current").removeClass("current");
 		 	$("#cvButton").addClass("current");
 		}
+		
+		
+		
 	});
 
 	//Text content	
 	//Hero
-	$("#hero_tagline").text("Front-end udvikling");
+	$("#hero_tagline").text("Frontend udvikling");
 	$("#hero_headline").text("Jens Kjær");
 
 	//Projects
 	$("#section_header_1").text("Portefolio");
 
 	$("#projects_category_header_1").text("Webshop eksempel");
-	$("#projects_category_header_2").text("To-do app");
-	$("#projects_category_header_3").text("Liverpool stats API");
+	$("#projects_category_header_2").text("To-do liste");
+	$("#projects_category_header_3").text("Liverpool resultater API");
 
-	$("#projects_category_subheader_1").text("React & Redux project");
-	$("#projects_category_subheader_2").text("React project");
-	$("#projects_category_subheader_3").text("MySQL & PHP project");
+	$("#projects_category_subheader_1").text("React & Redux projekt");
+	$("#projects_category_subheader_2").text("React projekt");
+	$("#projects_category_subheader_3").text("MySQL & PHP projekt");
 
 	$(".projects_github").text("Github");
 
@@ -68,7 +51,7 @@ $(document).ready(function(){
 	$("#section_header_2").text("CV");
 
 	$("#cv_name").text("Jens Kjær");
-	$("#cv_tagline").text("Front-end udvikler med forretningsforståelse");
+	$("#cv_tagline").text("Frontend udvikler med forretningsforståelse");
 	$("#cv_phone").text("61 65 47 76");
 	
 	$("#cv_programing_headline").text("Programmering");
@@ -95,6 +78,6 @@ $(document).ready(function(){
 	$("#footer_city").text("2200 København N");
 	$("#footer_linkedin").text("www.linkedin.com");
 	$("#footer_copyright").text("");
-	$("#footer-tagline").text("Front-end udvikling");
+	$("#footer-tagline").text("Frontend udvikling");
 	$("#footer_url").text("Jenskjr.dk");
 });

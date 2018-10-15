@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="./website/css/index.css">
 	<script src="./website/js/index.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!--Navigation-->
 <div class="text-center card-header fixed-top bg-light">
@@ -28,10 +28,10 @@
 	        <a id="homeButton" class="nav-link current" href="#">Home</a>
 	      </li>
 	      <li>
-	        <a id="projectsButton" class="nav-link" href="#">Portefolio</a>
+	        <a id="projectsButton" class="nav-link" href="#projects">Portefolio</a>
 	      </li>
 	      <li>
-	        <a id="cvButton" class="nav-link" href="#">CV</a>
+	        <a id="cvButton" class="nav-link" href="#cv">CV</a>
 	      </li>
 	    </ul>  
 	</div>
@@ -59,9 +59,12 @@
 	<div class="container">	
 		<div class="space"></div>	
 		<div class="row">	
+			
+			<!--
 			<div class="col-12 text-center text-white pt-4 pb-4">			
 				<h2 id="section_header_1"></h2>
 			</div>
+		-->
 		</div>
 		
 		<div class="row">
@@ -69,8 +72,8 @@
 				<div class="card border border-dark bg-light p-4 mb-4 mt-4">
 					<a href="./webshop/" target="_blank">
 						<h4 id="projects_category_header_1" class="mb-4"></h4>
-						<div style="min-height: 300px;" class="border pt-4 bg-white">
-							<img style="max-width: 100%;" src="./website/images/webshop2.png">
+						<div style="min-height: 280px" class="border border-dark bg-white">
+							<img style="max-width: 100%" class="p-1 pt-2" src="./website/images/webshop3.png">
 						</div>
 						<h5 id="projects_category_subheader_1" class="pt-4"></h5>
 					</a>
@@ -81,8 +84,8 @@
 				<div class="card border border-dark bg-light p-4 mb-4 mt-4">
 					<a href="./todoapp/" target="_blank">
 						<h4 id="projects_category_header_2" class="mb-4"></h4>
-						<div style="min-height: 300px;" class="border pt-4 bg-white">
-							<img style="max-width: 100%;" src="./website/images/todoApp.png">
+						<div style="min-height: 280px" class="border border-dark bg-white">
+							<img style="max-width: 100%" class="p-1 pt-2 align-top" src="./website/images/todoApp2.png">
 						</div>
 						<h5 id="projects_category_subheader_2" class="pt-4"></h5>
 					</a>
@@ -93,8 +96,8 @@
 				<div class="card border border-dark bg-light p-4 mb-4 mt-4">
 					<a href="./liverpool_stats/request_api.html" target="_blank">
 						<h4 id="projects_category_header_3" class="mb-4"></h4>
-						<div style="min-height: 300px;" class="border pt-4 bg-white">
-							<img style="max-width: 50%;" src="./website/images/liverpool.png">
+						<div style="min-height: 280px" class="border border-dark bg-white">
+							<img style="max-width: 50%" class="p-1 pt-4" src="./website/images/liverpool.png">
 						</div>
 						<h5 id="projects_category_subheader_3" class="pt-4"></h5>
 					</a>
@@ -110,17 +113,20 @@
 <div id="cv" class="bg-light">
 	<div class="container">
 		<div class="space"></div>
+			<!--
 			<div class="row">
 				<div class="col-12 text-center pt-4 pb-4">			
 					<h2 id="section_header_2"></h2>
 				</div>
 			</div>
+		-->
 	
 			<div class="text-center pb-4 justify-content-center">
 				<h2 id="cv_name" class=" mt-4"></h2>
 				<p id="cv_tagline" class="m-2"></p>
 				<h5 id="cv_phone"></h5>
 			</div>
+			<div class="space"></div>
 
 			<div class="row">
 				<div class="col-lg-4 col-md-6 text-center">

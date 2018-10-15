@@ -16,13 +16,16 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #41b3a3;
+  color: #41b3a3; !important
 }
 
 a:active {
-  text-decoration: none;
+  border: 1px solid #41b3a3;
   color: #41b3a3;
 }
+
+.nav-link {font-size: 0.9rem;}
+
 
 .nav-link {font-size: 0.9rem;}
 
