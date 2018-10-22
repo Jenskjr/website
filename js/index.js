@@ -6,15 +6,9 @@ $(document).ready(function(){
 	const projects_position = $('#projects').offset().top;
 	const cv_position = $("#cv").offset().top;	
 
-
 	//Scroll css functionality
 	$(window).scroll(function() {
-		if ($(window).scrollTop() < (home_position+100) ) {
-			$("a.current").removeClass("current");
-		 	$("#homeButton").addClass("current");
-		}
-		
-		if ($(window).scrollTop() >= (projects_position-100) ) {
+		if ($(window).scrollTop() >= (projects_position-200) ) {
 			$("a.current").removeClass("current");
 		 	$("#projectsButton").addClass("current");
 		}
@@ -23,22 +17,23 @@ $(document).ready(function(){
 		if ($(window).scrollTop() >= (cv_position-100) ) {
 			$("a.current").removeClass("current");
 		 	$("#cvButton").addClass("current");
+		}	
+
+		if ($(window).scrollTop() < (home_position+50) ) {
+			$("a.current").removeClass("current");
+		 	$("#homeButton").addClass("current");
 		}
-		
-		
-		
 	});
 
 	//Text content	
 	//Hero
-	$("#hero_tagline").text("Frontend udvikling");
+	$("#hero_tagline").text("Frontend-udvikling");
 	$("#hero_headline").text("Jens Kjær");
 
 	//Projects
-	$("#section_header_1").text("Portefolio");
 
 	$("#projects_category_header_1").text("Webshop eksempel");
-	$("#projects_category_header_2").text("To-do liste");
+	$("#projects_category_header_2").text("To-do liste app");
 	$("#projects_category_header_3").text("Liverpool resultater API");
 
 	$("#projects_category_subheader_1").text("React & Redux projekt");
@@ -48,10 +43,8 @@ $(document).ready(function(){
 	$(".projects_github").text("Github");
 
 	//CV
-	$("#section_header_2").text("CV");
-
 	$("#cv_name").text("Jens Kjær");
-	$("#cv_tagline").text("Frontend udvikler med forretningsforståelse");
+	$("#cv_tagline").text("Frontend udvikler");
 	$("#cv_phone").text("61 65 47 76");
 	
 	$("#cv_programing_headline").text("Programmering");
@@ -59,7 +52,7 @@ $(document).ready(function(){
 
 	$("#cv_course_headline").text("Kurser");
 	$("#cv_course_1").text("Front-end med React og Redux");
-	$("#cv_course_2").text("Journalistikens grundtrin");
+	$("#cv_course_2").text("Journalistikkens grundtrin");
 
 	$("#cv_language_headline").text("Sprog");
 	$("#cv_language").text("Dansk, tysk og engelsk");	
@@ -78,6 +71,6 @@ $(document).ready(function(){
 	$("#footer_city").text("2200 København N");
 	$("#footer_linkedin").text("www.linkedin.com");
 	$("#footer_copyright").text("");
-	$("#footer-tagline").text("Frontend udvikling");
+	$("#footer-tagline").text("Frontend-udvikling");
 	$("#footer_url").text("Jenskjr.dk");
 });
