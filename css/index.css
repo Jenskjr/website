@@ -35,9 +35,25 @@ a:active {
   background-color: #41b3a3;
 }
 
+.bg-red {
+  background-color: #ec7373;
+}
+
 /*borders*/
 .border-orange {
   border: 2px solid #e27d60;
+}
+
+.border-green {
+   border: 1px solid #41b3a3;
+}
+
+.border-red {
+  border: 1px solid #ec7373   
+}
+
+.border-bottom-red {
+  border-bottom: 1px solid #ec7373   
 }
 
 .border-lightorange {
@@ -52,7 +68,7 @@ a:active {
 .hero-image {
 
 	/*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");*/
-	height: 450px;
+	height: 500px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -102,7 +118,7 @@ a:active {
 /*md*/
 @media all and (max-width: 992px) and (min-width: 769px){
   .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");}
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");}
 }
 
 /*lg*/
@@ -114,7 +130,7 @@ a:active {
 /*xlg*/
 @media all and (min-width: 1200px) {
   .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");}  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");} 
 }
 
 
