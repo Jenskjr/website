@@ -29,6 +29,12 @@ a:active {
 
 .nav-link {font-size: 0.9rem;}
 
+/*colors*/
+.js-yellow{color: #f7df1e;}
+.react-blue {color: #00d8ff;}
+.html5-red {color: #e34f26;}
+.css-blue {color: #3B5998;}
+.php-blue {color: #4f5b93}
 
 /*background colors*/
 .bg-green {
@@ -39,11 +45,7 @@ a:active {
   background-color: #ec7373;
 }
 
-/*borders*/
-.border-orange {
-  border: 2px solid #e27d60;
-}
-
+/*border colors*/
 .border-green {
    border: 1px solid #41b3a3;
 }
@@ -56,17 +58,50 @@ a:active {
   border-bottom: 1px solid #ec7373   
 }
 
-.border-lightorange {
-    border: 2px solid #e8a87c;
+/*heights*/
+.h-auto {
+  height: auto;
 }
 
-.border-lightred {
-    border: 4px solid #c38d9e;
+.h-110px {
+  height: 110px;
 }
+
+.h-200px {
+  height: 200px;
+}
+
+.w-100px {
+  width:100px;
+}
+
+.mh-95 {
+  max-height:95%;
+}
+
+.mh-100 {
+  max-height:100%;
+}
+
+/*widths*/
+.mw-95 {
+  max-width:95%;
+}
+
+/*widths*/
+.mw-100 {
+  max-width:100%;
+}
+
+/*margins*/
+.m-neg-150 {
+  margin-top: -150px;
+}
+
+
 
 /*hero content*/
 .hero-image {
-
 	/*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");*/
 	height: 500px;
 	background-position: center;
@@ -100,12 +135,13 @@ a:active {
   color: white;
 }
 
-.space {height: 80px;}
 
 .cv-card {min-height: 180px;}
 
 .footer {min-height: 250px;}
 
+
+/*divice*/
 /*xs*/
 @media all and (max-width: 575px) {
 }
