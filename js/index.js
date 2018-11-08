@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
 	//Text content	
@@ -58,6 +56,16 @@ $(document).ready(function(){
 	$("#footer_url").text("Jenskjr.dk");
 
 
+	// Opacity Nav-bar
+	$(window).scroll(function() {
+		if ($(window).scrollTop() >= (100) ) {
+		 	$("#nav_bar").addClass("opacity");
+		}
+		if ($(window).scrollTop() < (100) ) {
+		 	$("#nav_bar").removeClass("opacity");
+		}
+	});
+
 	//Scroll css functionality
 	const home_position = $("body").offset().top;
 	const projects_position = $('#projects').offset().top;
@@ -81,76 +89,100 @@ $(document).ready(function(){
 		}
 	});
 
-	//Chart
-	const pointsChart = (year, points) => {
-		var ctx = $("#chartNumPoints");
-		var chart = new Chart(ctx, {
-	    // The type of chart we want to create
-	    type: 'bar',
-	    // The data for our dataset
-	    data: {
-	        labels: year,
-	        datasets: [{
-	            label: "Number of Points",
-	            borderColor: '#aaa',
-	            data: points,
-	        }]
-	    },
-    	// Configuration options go here
-    	options: {}
-		});
+	liverpoolTitlesDataList();
+	liverpoolResultsDataChart();
+
+}); //document ready
+
+//Functions
+//Chart
+const pointsChart = (year, points) => {
+	var ctx = $("#chartNumPoints");
+	var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+    // The data for our dataset
+    data: {
+        labels: year,
+        datasets: [{
+            label: "Number of Points",
+            borderColor: '#aaa',
+            data: points,
+        }]
+    },
+	// Configuration options go here
+	options: {}
+	});
+}
+
+const positionsChart = (year, position) => {
+	var ctx = $("#chartPositions");
+	//let position = [7, 6, 8, 7, 2, 6, 8, 4, 4];
+	var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+    // The data for our dataset
+    data: {
+        labels: year,
+        datasets: [{
+            label: "Premier League position",
+            borderColor: '#aaa',
+            data: position,
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+  		scales: {
+    		yAxes: [{
+      			ticks: {
+        			reverse: true,
+        			min: 2, 
+      			}
+    		}]
+  		}
 	}
 
-	const positionsChart = (year, position) => {
-		var ctx = $("#chartPositions");
-		//let position = [7, 6, 8, 7, 2, 6, 8, 4, 4];
-		var chart = new Chart(ctx, {
-	    // The type of chart we want to create
-	    type: 'line',
-	    // The data for our dataset
-	    data: {
-	        labels: year,
-	        datasets: [{
-	            label: "Premier League position",
-	            borderColor: '#aaa',
-	            data: position,
-	        }]
-	    },
+	});
+}
 
-	    // Configuration options go here
-	    options: {
-	  		scales: {
-	    		yAxes: [{
-	      			ticks: {
-	        			reverse: true,
-	        			min: 2, 
-	      			}
-	    		}]
-	  		}
-		}
+//Stats data and call to charts
+liverpoolResultsDataChart = () => {
+	const api_pl_results = "http://jenskjr.dk/liverpool_stats/api.php?pl_results";
 
-		});
-	}
-
-	//Stats data and call to charts
-	liverpoolStatsDataChart = () => {
-		const api_url = "http://jenskjr.dk/liverpool_stats/api.php";
-		fetch(api_url)
-		.then(response => 
-			response.json()
-		)	
-		.then((data) => {
-	        let year = data.results.map(obj => obj.year);
-	        let points = data.results.map(obj =>  obj.points);
-	        let position = data.results.map(obj =>  obj.position);
-	        pointsChart(year, points);
-	        positionsChart(year, position);
-	    })
+	fetch(api_pl_results)
+		.then(response => {
+			return response.json();
+		})
+		.then(data => {
+			let year = data.results.map(obj => obj.year);
+			let points = data.results.map(obj =>  obj.points);
+        	let position = data.results.map(obj =>  obj.position);
+        	pointsChart(year, points);
+			positionsChart(year, position);
+		})
 		.catch(error => {
 			console.log(error);
 		});
-	}
-	
-	liverpoolStatsDataChart();
+}
 
-}); //document ready
+liverpoolTitlesDataList = () => {
+	const api_pl_results = "http://jenskjr.dk/liverpool_stats/api.php?titles";
+
+	fetch(api_pl_results)
+		.then(response => {
+			return response.json();
+		})
+		.then(data => {
+			let titles = data.titles.map(obj => "<div class='row border-bottom'>" +
+												"<div class='col-8'>" + obj.title_name + "</div>" +
+												"<div class='col-4'>" + obj.title_count + "	times</div>" + 
+												"</div>"
+										)
+			$("#liverpool_titles").html(titles)
+
+		})
+		.catch(error => {
+			console.log(error);
+		});
+}
