@@ -140,7 +140,34 @@ a:active {
 }
 
 
-.cv-card {min-height: 180px;}
+.gradient {
+  margin-top: -200px; 
+  position: relative; 
+  z-index: 1; 
+  height: 200px;
+  background-image: linear-gradient(to bottom, 
+        rgba(249, 249, 249, 0), 
+        rgba(249, 249, 249, 1)
+    100%);
+}
+
+.profile-image {
+  margin-bottom: 20px;
+}
+
+.cv-card {
+  min-height: 180px;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-green-line {
+  width: 10px;  
+  position: absolute;
+  left: 80px;
+  top: 0px;
+  z-index: 0;
+}
 
 .footer {min-height: 250px;}
 

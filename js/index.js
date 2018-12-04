@@ -33,18 +33,28 @@ $(document).ready(function(){
 	$("#cv_programing").text("JavaScript, React, Redux, PHP, SQL, HTML, CSS");
 
 	$("#cv_course_headline").text("Kurser");
+	$("#cv_course_2").text("The Complete JavaScript Course 2018");
+	$("#cv_course_school_2").text("Udemy.com");
 	$("#cv_course_1").text("Front-end med React og Redux");
+	$("#cv_course_school_1").text("København Erhvervsakademi");
+	
 
 	$("#cv_language_headline").text("Sprog");
 	$("#cv_language").text("Dansk, tysk og engelsk");	
 	
 	$("#cv_education_headline").text("Uddannelse");
 	$("#cv_education_1").text("Cand.it i it, kommunikation og organisation");
+	$("#cv_school_1").text("Aarhus universitet");
 	$("#cv_education_2").text("HA almen");
+	$("#cv_school_2").text("Syddansk Universitet");
 	
 	$("#cv_job_headline").text("Erhvervserfaring");
-	$("#cv_job_experience_1").text("Implementeringskonsulent");
-	$("#cv_job_experience_2").text("Forretningskonsulent");
+	$("#cv_job_experience_3").text("Webudvikler");
+	$("#cv_job_company_3").text("ToEcho");
+	$("#cv_job_experience_2").text("Implementeringskonsulent");
+	$("#cv_job_company_2").text("Templafy Aps");
+	$("#cv_job_experience_1").text("Forretningskonsulent");
+	$("#cv_job_company_1").text("Formpipe A/S");
 
 	//Footer
 	$("#footer_name").text("Jens Kjær");
