@@ -185,19 +185,19 @@ a:active {
 /*md*/
 @media all and (max-width: 992px) and (min-width: 769px){
   .hero-image {
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");}
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/small/hero-back-code.png");}
 }
 
 /*lg*/
 @media all and (min-width: 993px) and (max-width: 1199px) {
   .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");}
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/small/hero-back-code.png");}
 }
 
 /*xlg*/
 @media all and (min-width: 1200px) {
   .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/heroBackCode.png");} 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/small/hero-back-code.png");} 
 }
 
 
